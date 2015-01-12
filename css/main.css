@@ -1,0 +1,30 @@
+* {
+	font-family:		"Roboto", sans-serif;
+	cursor:				auto;
+}
+
+body {
+	margin:				0px 25px;
+	background-color: 	#f3f3f3;
+}
+
+a {
+	cursor:				pointer;
+}
+
+.burnt-orange {
+	background-color: 	#ec4c17;
+} 
+
+.content>.container {
+	margin:				25px;
+	padding:			0px;
+}
+
+.content * {
+	font-weight:		100;
+}
+
+.selected {
+	color:				#EC4C17;
+}

@@ -1,0 +1,58 @@
+body>.content * {
+	 /*for debugging alignment and stuff */
+	/*border:			2px solid black;*/
+}
+
+#projects {
+	width: 				100%;
+}
+
+#project-heading h1 {
+	/* remove some of the vertical whitespace
+	 * to align the entire bar better
+	 */
+	/*height:			0.5em;*/
+	/*line-height:		0.3em;*/
+}
+
+#project-title h2 {
+	/* remove some of the vertical whitespace
+	 * to align the entire bar better
+	 */
+	/*height:			0.5em;*/
+	/*line-height:		0.3em;*/
+}
+
+#project-list p {
+	padding-left:		10px;
+	margin-top:			-10px;
+	cursor:				pointer;
+}
+
+#project-list p:hover {
+	color:				#EC4C17;
+}
+
+#projects td {
+	vertical-align: 	top;
+}
+
+#projects #sidebar {
+	width:				25%;
+}
+
+#projects #meat {
+	width:				75%;
+}
+
+#projects td:first-child {
+	vertical-align: 	top;
+}
+
+#projects #selected-project>.container {
+		padding:		10px;
+}
+
+#projects table td + td {
+	border-left:		2px solid #5A5A5A;
+}

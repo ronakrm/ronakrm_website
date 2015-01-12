@@ -1,0 +1,86 @@
+/* title bar styling */
+#title-bar td {
+	/* for debugging alignment and stuff */
+	/*border:				2px solid black;*/
+	
+	/* stop nav from wrapping because of orange bar.
+	 * orange bar fills rest of open space, collapsing 
+	 * nav. Forces nav to not wrap
+	 */
+	white-space:		nowrap;
+}
+
+#title-bar {
+	margin:				0px 25px;
+	margin-bottom:		-10px;
+	padding:			0px 0px;
+}
+
+#title-bar>.container>* {
+	/* align all elements in title bar to vertical center */
+	vertical-align:		middle;
+}
+
+/* name styling */
+#title-bar #title>.container {
+	/*padding:			0px;*/
+	/*margin: 			0px;*/
+}
+#title-bar #title h1 {
+	font-size:			28pt;
+	/* remove some of the vertical whitespace
+	 * to align the entire bar better
+	 */
+	height:				0.5em;
+	line-height:		0.3em;
+}
+#title-bar #title  a {
+	cursor:				pointer;
+	text-decoration:	none;
+	color: 				#EC4C17;
+}
+
+/* nav styling */
+#title-bar #nav {
+	margin:				0px 25px;
+	padding:			0px 0px;
+}
+/* to remove leading whitespace from nav bar list */
+#title-bar #nav ul {
+	padding:			0px;
+}
+#title-bar #nav li {
+	margin:				0px 0px;
+	padding:			0px 15px;
+	/* show list inline, not newline-separated */
+	display:			inline-block;
+}
+
+#title-bar #nav a {
+	font-size:			14pt;
+	color:				#5a5a5a;
+	font-weight:		lighter;
+	text-transform:		capitalize;
+	text-decoration:	none;
+	cursor:				pointer;
+}
+
+/* wip hover style */
+#title-bar #nav li#wip a {
+	color:				#F3F3F3;
+}
+
+#title-bar #nav li#wip a:hover {
+	color:				#5a5a5a;
+}
+
+/* title box styling */
+#title-bar #title-box {
+	background-color:	#EC4C17;
+	width: 				auto;
+	height: 			30px;
+}
+#title-bar td:last-child {
+	/* have box fill rest of parent */
+	width: 				100%;
+} 
