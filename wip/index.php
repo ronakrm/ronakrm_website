@@ -14,7 +14,7 @@
 	<div class="content">
 		<div class="container">
 			<h1>Work in Progress</h1>
-			<p>Always under construction.</p>
+			<p>Testing ground for other pages and random things.</p>
 		</div>
 	</div>
 

@@ -86,11 +86,19 @@
 									<p>Check out the full paper here: <a href="ALADDIN.pdf">Paper</a></p>
 								</div>
 								<div id="uavs" style="display:none">
-									<h3>Collaborators: Ganesh Kumar, Margaret Pearce</h3>
-									<h3>Abstract</h3>
-									<p>Unmanned Aerial Vehicles (UAVs) are changing workflows in a variety of different fields ranging from security to cinematography. In particular, agriculture is a field that is poised to strongly benefit from this technology. In this paper, we use an ethnographic field study to gauge the current perception of UAVs in the farming community. A Grounded Theory analysis of interviews with stakeholders was used to identify UAV trends, impressions, and interest. Our findings revealed relatively low familiarity with UAV technology among farmers but significant interest in future possibilities. Key concerns included the applicability of UAVs and the potential return on investment. Furthermore, government regulation of UAVs is a critical factor that is slowing adoption as legislative decisions wait to be made. Despite these concerns, stakeholders are curious to see the future value of utilizing this technology. These results contribute to our understanding of the role of UAVs in agricultural settings and inform future design implications.</p>
-									<p>View our presentation poster here: <a href="CS770_Final_Poster.pdf">Poster</a>
-									<br>Check out the full paper here: <a href="UAVsInAgriculture_HCIF14_Group5.pdf">Paper</a></p>
+									<div class="text">
+										<h3>Collaborators: Ganesh Kumar, Margaret Pearce<a href="CS770_Final_Poster.jpg"><img width="25%" height="25%" src="CS770_Final_Poster-thumb.jpg" style="float:right;margin:25px"></a>
+											
+										</h3>
+										<h3>Abstract</h3>
+										<p>
+										Unmanned Aerial Vehicles (UAVs) are changing workflows in a variety of different fields ranging from security to cinematography. In particular, agriculture is a field that is poised to strongly benefit from this technology. In this paper, we use an ethnographic field study to gauge the current perception of UAVs in the farming community. A Grounded Theory analysis of interviews with stakeholders was used to identify UAV trends, impressions, and interest. Our findings revealed relatively low familiarity with UAV technology among farmers but significant interest in future possibilities. Key concerns included the applicability of UAVs and the potential return on investment. Furthermore, government regulation of UAVs is a critical factor that is slowing adoption as legislative decisions wait to be made. Despite these concerns, stakeholders are curious to see the future value of utilizing this technology. These results contribute to our understanding of the role of UAVs in agricultural settings and inform future design implications.</p>
+										<p>View our presentation poster here: <a href="CS770_Final_Poster.pdf">Poster</a>
+										<br>Check out the full paper here: <a href="UAVsInAgriculture_HCIF14_Group5.pdf">Paper</a></p>
+									</div>
+									<div class="sidepic" >
+										
+									</div>
 								</div>
 								<div id="website" style="display:none">
 									<p>I've worked at jobs doing some web work before, but have never gotten a chance to completely go through the entire process and get the basics down. I've finally gotten around to it, and plan on using this as a learning process!</p>
@@ -121,7 +129,10 @@
 								</div>
 								<div id="robogoalie" style="display:none">
 									<h3>Collaborators: Aaron Ridenour, Joe Scherping, Ryan Wooster</h3>
-									<p>EECS 467  robogoalie Select a project to the left to find out more about a specific project I've worked on!</p>
+									<p>The purpose of the project was to create a proof of concept demonstration which would incorporate complex ideas from the EECS 467: Autonomous Robotics, and from the field, while also being approachable to a lay audience.
+										Using dynamic object tracking and position prediction, the system can accurately move the robotic arm to intercept the ball's trajectory.
+										Camera image processing was used to track the ball, and robotic kinematics was used to move the arm to the correct position.</p>
+									<p>Check out our technical video overview here: <a href="https://www.youtube.com/watch?v=X_PQeLn894c">YouTube</a></p>
 								</div>
 							</div>
 						</div>	
