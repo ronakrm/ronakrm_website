@@ -125,7 +125,8 @@
 								</div>
 								<div id="autonomous" style="display:none">
 									<h3>Collaborators: Garrett Dewald, Jim Rasche, Ryan Wooster</h3>
-									<p>EECS 467 botlab</p>
+									<p>This project's goal was to implement the full pipeline required to autonomously navigate through a maze. The hardware used was a <a href="http://april.eecs.umich.edu/maebot/">MAEbot</a>, provided by the <a href="http://april.eecs.umich.edu/">APRIL lab</a> at Michigan. Computer vision techniques were used to process input from a forward-facing camera. Barrel distortion was automatically corrected for using a calibration image, and a mapping from our imaging plane to real world coordinates was created using perspective projection homography methods. Kalman filtering was used to update the robot's state estimate integrating both odometry information from wheel encoders and an inertial measurement unit. Once a map of the observable world was created, path planning was used to explore and navigate.</p>
+									<p>You can find more information about our automatic barrel distortion correction here: <a href="https://www.youtube.com/watch?v=xL8AaGi8LPs"></a></p>
 								</div>
 								<div id="robogoalie" style="display:none">
 									<h3>Collaborators: Aaron Ridenour, Joe Scherping, Ryan Wooster</h3>
