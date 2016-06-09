@@ -4,8 +4,9 @@
 }
 
 body {
-	margin:				0px 25px;
-	background-color: 	#f3f3f3;
+	width:				1250px;
+	margin:				0px auto;
+	background-color: 	#FBFBFB;/*#f3f3f3;*/
 }
 
 a {

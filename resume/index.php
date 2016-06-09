@@ -33,9 +33,11 @@
 			<!-- <div id="resume" width="80%" height="1500">
 				
 			</div> -->
-			<object data="Ronak_Mehta_Resume.pdf" type="application/pdf" width="80%" height="1100">
+			<div>
+				<object data="Ronak_Mehta_Resume.pdf" type="application/pdf" margin="auto" width="500px" height="1100px">
   					<p>Ronak Mehta's Resume <a href="Ronak_Mehta_Resume.pdf">My Resume</a></p>
-			</object>
+				</object>
+			</div>
 		</div>
 	</div>
 

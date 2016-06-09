@@ -64,6 +64,11 @@
 	text-decoration:	none;
 	cursor:				pointer;
 }
+#title-bar #nav a:hover {
+	color:				#EC4C17;
+}
+
+
 
 /* wip hover style */
 #title-bar #nav li#wip a {

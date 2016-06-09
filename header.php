@@ -12,9 +12,9 @@
 				<div class="container">
 					<ul>
 						<li><a href="/~ronakrm/projects/">Projects</a></li>
-						<li><a href="/~ronakrm/resume/">R&eacute;sum&eacute;</a></li>
+						<li><a href="/~ronakrm/coursework/">Coursework</a></li>
+						<!--<li><a href="/~ronakrm/demos/">Demos</a></li>-->
 						<li><a href="/~ronakrm/contact/">Contact</a></li>
-						<li id="wip"><a href="/~ronakrm/wip/">Work in Progress</a></li>
 					</ul>
 				</div>
 			</div>
