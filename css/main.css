@@ -4,7 +4,7 @@
 }
 
 body {
-	width:				1250px;
+/*	width:				1250px;*/
 	margin:				0px auto;
 	background-color: 	#FBFBFB;/*#f3f3f3;*/
 }
@@ -16,6 +16,10 @@ a {
 .burnt-orange {
 	background-color: 	#ec4c17;
 } 
+
+.wisc-red {
+	background-color:	#b70101;
+}
 
 .content>.container {
 	margin:				25px;
@@ -32,7 +36,7 @@ a {
 
 html, body {
 	height: 100%;
-	min-height: 100%;
+	/*min-height: 100%;*/
 }
 
 .prettylink {

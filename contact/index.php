@@ -13,11 +13,13 @@
 
 	<div class="content">
 		<div class="container" align="center">
-			<h1>Ronak Mehta<br>
+			<h2>Ronak Mehta<br>
 			University of Wisconsin-Madison<br>
-			Computer Sciences Department<br>
-			Office 4387<br>
-			ronakrm@cs.wisc.edu</h1>
+			Office 5770<br>
+			Medical Sciences Center<br>
+			1300 University Ave.<br>
+			Madison, WI 53706<br>
+			ronakrm@cs.wisc.edu</h2>
 		</div>
 	</div>
 

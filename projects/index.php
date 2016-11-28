@@ -37,9 +37,6 @@
 								<div id="t-uavs" style="display:none">
 									<h2>UAVs in Agriculture: Perceptions, Prospects, and "Probably Not"</h2>
 								</div>
-								<div id="t-website" style="display:none">
-									<h2>Website Design and Development</h2>
-								</div>
 								<div id="t-design-mfg" style="display:none">
 									<h2>Mechanical Design and Manufacturing Robot Competition</h2>
 								</div>
@@ -63,8 +60,6 @@
 								<h3>Graduate</h3>
 									<p id="-aladdin">Adversarial Active Learning</p>
 									<p id="-uavs">UAVs in Agriculture</p>
-								<h3>Personal</h3>
-									<p id="-website">This Website!</p>
 								<h3>Undergraduate</h3>									
 									<p id="-design-mfg">Design and Manufacturing</p>
 									<p id="-balancing-robot">Self-Balancing Robot</p>
@@ -99,13 +94,6 @@
 									<div class="sidepic" >
 										
 									</div>
-								</div>
-								<div id="website" style="display:none">
-									<p>I've worked at jobs doing some web work before, but have never gotten a chance to completely go through the entire process and get the basics down. I've finally gotten around to it, and plan on using this as a learning process!</p>
-									<p>All of the code for the website is being written from scratch. I've been using the examples and tutorials from <a href="http://www.codecademy.com/">Codecademy</a> as guides. The courses for website building are pretty great, at least for getting off of the ground!</p>
-									<p>Currently using mostly HTML and CSS concepts, along with some basic Javascript. Hoping to get some more interactivity as I go through a few more Codecademy courses!</p>
-									<p>Feel free to poke around, but as it is a work in progress please don't judge me too much for the code :).</p>
-									<!-- Link to Github maybe? -->									
 								</div>
 								<div id="design-mfg" style="display:none">
 									<h3>Collaborators: Max Brodsky, Henrietta Cho, Samuel Shrago</h3>

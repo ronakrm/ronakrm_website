@@ -13,12 +13,9 @@
 
 	<div class="content">
 		<div class="container">
-			<h1>Home</h1>
-			<h3>Welcome to my homepage!</h3>
-			<h3>The main purpose of this site is to showcase a few projects I've worked on and give me a chance to gain some experience with web development.</h3>
-			<h3>I am currently taking CS 761: Advanced Machine Learning, CS 766: Computer Vision, and ECE 901: Online Learning. I am also a teaching assistant for CS 76O: Machine Learning this semester.</h3>
+			<h3>I am third-year graduate student at the University of Wisconsin-Madison. I am working with <a href="biostat.wisc.edu/~vsingh" class="prettylink">Dr. Vikas Singh</a> on machine learning and computer vision projects in collaboration with the <a href="adrc.wisc.edu" class="prettylink">Wisconsin Alzheimer's Disease Research Center</a> to develop methods for analyzing preclinical datasets.</h3>
+			<h3>I completed my undergraduate degree in Computer Engineering at the University of Michigan-Ann Arbor in 2014, and my master's degree in Computer Science at UW-Madison in 2016.</h3>
 			<h3>For a quick take away, check out my <a href="/~ronakrm/resume/Ronak_Mehta_Resume.pdf" class="prettylink">R&eacute;sum&eacute;</a>.</h3>
-			<h3>For a more in-depth look at some of my work, check out my <a href="/~ronakrm/projects/" class="prettylink">Projects</a>.</h3>
 			<br><h3><a href="/~ronakrm/contact/" class="prettylink">Contact Me.</a></h3>
 		</div>
 	</div>
