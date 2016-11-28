@@ -96,7 +96,7 @@
 									</div>
 								</div>
 								<div id="design-mfg" style="display:none">
-									<h3>Collaborators: Max Brodsky, Henrietta Cho, Samuel Shrago</h3>
+									<h3>Collaborators: Max Brodsky, Henrietta Cho, Samuel Shrago<a href="250_CAD.PNG"><img width="25%" height="25%" src="250_CAD.PNG" style="floag:right;margin:25px"></a></h3>
 									<p>This project was a semester-long survey of a complete mechanical design and manufacturing product cycle. The end machine was designed to compete in a ball-collecting competition.</p>
 									<p>Milestones included initial design sketches, strategy development, and mechanical considerations. After a full design review, engineering drawings and fabrication instructions were developed, and finally the parts were manufactured using machining equipment including laser cutters, lathes, and mills.</p>
 									<!--TODO youtube link maybe? -->
