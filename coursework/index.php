@@ -16,6 +16,9 @@
 		<div class="container">
 			<h1>Coursework</h1>
 			<h3>Graduate Courses at University of Wisconsin-Madison</h3>
+				<h4>Fall 2016</h4>
+				<p>CS 726: Nonlinear Optimization I
+				<br>ECE 901: Large Scale Optimization and Machine Learning</p>
 				<h4>Spring 2016</h4>
 				<p>CS 728: Integer Optimization
 				<br>STAT 610: Introduction to Statistical Inference</p>
