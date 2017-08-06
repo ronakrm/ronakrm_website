@@ -6,12 +6,17 @@
 	<link rel="stylesheet" href="../css/title-bar.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/twocolumn.css">
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script> 
+		$(function(){
+	  		$("#header").load("../header.html"); 
+		});
+	</script> 
 </head>
 
-<?php include '../header.php'; ?>
 
 <body>
-
+	<div id="header"></div>
 	<div class="content">
 		<div class="container">
 			<table id="projects">

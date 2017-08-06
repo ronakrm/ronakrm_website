@@ -6,16 +6,24 @@
 	<link rel="stylesheet" href="../css/title-bar.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/lists.css">
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script> 
+		$(function(){
+	  		$("#header").load("../header.html"); 
+		});
+	</script> 
 </head>
 
-<?php include '../header.php'; ?>
-
 <body>
-
+	<div id="header"></div>
 	<div class="content">
 		<div class="container">
 			<h1>Coursework</h1>
 			<h3>Graduate Courses at University of Wisconsin-Madison</h3>
+				<h4>Spring 2017</h4>
+				<p>CS 524: Intro to Optimization</p>
+				<p>CS 703: Advanced Topics in Programming Languages and Compilers</p>
+				<p>STAT 992: Graphical Models</p>
 				<h4>Fall 2016</h4>
 				<p>CS 726: Nonlinear Optimization I
 				<br>ECE 901: Large Scale Optimization and Machine Learning</p>
