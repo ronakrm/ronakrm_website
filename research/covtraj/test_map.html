@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/* CSS goes here. */
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+
+
+
+.subunit.Florida { fill: #ddc; }
+.subunit.Georgia { fill: #cdd; }
+.subunit.Alabama { fill: #cdc; }
+.subunit-boundary {
+  fill: none;
+  stroke: #666;
+}
+.subunit-label {
+  fill: #000;
+  fill-opacity: .5;
+  font-size: 20px;
+  font-weight: 300;
+  text-anchor: middle;
+}
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: col-resize;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+svg {
+	border-style: dashed;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script src="topojson.v2.min.js" charset="utf-8"></script>
+
+<body>
+	<div>
+		<svg id="map1" height="250" width="250"></svg>
+		<svg id="map2" height="250" width="250"></svg>
+	</div>
+	<div >
+		<svg id="slider" height="50" width="500"></svg>
+	</div>
+	<div>
+		<span id="slider3text">0</span>
+	</div>
+
+	<div style="display:inline-block;" id="legend"></div>
+    <div style="display:inline-block; float:left" id="container1">
+    	<svg id="corrcontainer" ></svg>
+    </div>
+    <div style="display:inline-block; float:left" id="container2">
+    	<svg id="corrcontainer" ></svg>
+    </div>
+
+</body>
+
+
+<script src="main.js"></script>
+
+	<script>
+
+    var correlationMatrix = [
+        [1, 0.3, 0.2],
+        [0.3, 1, 0.5],
+        [0.2, 0.5, 1]
+    ];
+    var correlationMatrix2 = [
+		[0, 0.7, 0.8],
+		[0.7, 0, 0.5],
+		[0.8, 0.5, 0]
+    ];
+
+    function corrInit(container, data) {
+		var labels = ['Alabama', 'Florida', 'Georgia'];
+		Matrix({
+	        container : container,
+	        data      : data,
+	        labels    : labels,
+	        start_color : '#ffffff',
+	        end_color : '#3498db'
+	    });
+	}
+
+	d3.queue()
+	.defer(d3.json, "girls.json")
+	.defer(d3.json, "boys.json")
+	.await(startInit);
+
+	function startInit(error, girls, boys) {
+		mapInit("map1");
+		mapInit("map2");
+		corrInit("#container1", girls[0].mat);
+		corrInit("#container2", boys[0].mat);
+		Legend({
+    		widthLegend : 	100,
+        	start_color : '#ffffff',
+        	end_color : '#3498db'
+    	});
+
+	
+
+		var slidersvg = d3.select("#slider"),
+	    margin = {right: 50, left: 50},
+	    width = +slidersvg.attr("width") - margin.left - margin.right,
+	    height = +slidersvg.attr("height");
+
+		var x = d3.scaleLinear()
+		    .domain([1910, 2015])
+		    .range([0, width])
+		    .clamp(true);
+
+		var slider = slidersvg.append("g")
+		    .attr("class", "slider")
+		    .attr("transform", "translate(" + margin.left + "," + height / 2 + ")");
+
+		slider.append("line")
+		    .attr("class", "track")
+		    .attr("x1", x.range()[0])
+		    .attr("x2", x.range()[1])
+		  	.select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+		    .attr("class", "track-inset")
+		  	.select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+		    .attr("class", "track-overlay")
+		    .call(d3.drag()
+		        .on("start.interrupt", function() { slider.interrupt(); })
+		        .on("start drag", function() {
+		        						console.log(Math.round(x.invert(d3.event.x)));
+		        						t = Math.round(x.invert(d3.event.x)) - 1910;
+		        						console.log(t);
+		        						girlst = girls[t];
+		        						boyst = boys[t];
+		        						slider_event(x.invert(d3.event.x), girlst, boyst);
+		        					}
+					)
+		        );
+
+		// slider axis tick labels
+		slider.insert("g", ".track-overlay")
+		    .attr("class", "ticks")
+	    	.attr("transform", "translate(0," + 18 + ")")
+		  	.selectAll("text")
+		  	.data(x.ticks(10))
+		  	.enter().append("text")
+		    .attr("x", x)
+		    .attr("text-anchor", "middle")
+		    .text(function(d) { return d; });
+
+		// circle that is selector on slider
+		var handle = slider.insert("circle", ".track-overlay")
+		    .attr("class", "handle")
+		    .attr("r", 9);
+
+		// beginning intro on page load
+		slider.transition() // Gratuitous intro!
+		    .duration(10000)
+		    .ease(d3.easeLinear) // defaults to accelerate/decelerate
+		    .tween("hue", function() {
+		      var i = d3.interpolate(1910, 2015);
+		      return function(t) { 
+		      	girlst = girls[Math.round(i(t)) - 1910];
+		      	boyst = boys[Math.round(i(t)) - 1910];
+		      	slider_event(i(t), girlst, boyst);
+	      		};
+		    });
+
+
+function slider_event(x, girls, boys) {
+	hue(x);
+	d3.select('#slider3text').text(Math.round(x));
+	updateCorrs(girls.mat, boys.mat);
+	updateMaps(x, girls.topnames, boys.topnames);
+}
+
+function hue(h) {
+  handle.attr("cx", x(h));
+  slidersvg.style("background-color", d3.hsl(h, 0.8, 0.8));
+}
+
+function updateMaps(x, girlnames, boynames ) {
+
+	// for testing
+	var alabama = d3.selectAll('.subunit.Alabama');
+	alabama.style("fill", d3.hsl(x,0.8,0.8));
+
+	updateMap("map1", girlnames);
+	updateMap("map2", boynames);
+}
+function updateMap(mapvsvg_id, names) {
+	var mapsvg = d3.select("#" + mapvsvg_id);
+
+  	mapsvg.selectAll(".subunit-label")
+	    .data(names)
+	    .text(function(d, i) {
+	    	return d[0];
+	     });
+  
+}
+
+function updateCorrs(girls, boys) {
+
+	updateCorrelation(
+		{
+	        container : '#container1',
+	        data      : girls,
+	        start_color : '#ffffff',
+	        end_color : '#3498db'
+		}
+	);
+	updateCorrelation(
+		{
+	        container : '#container2',
+	        data      : boys,
+	        start_color : '#ffffff',
+	        end_color : '#3498db'
+		}
+	);
+}
+
+function updateCorrelation(options) {
+	var width = 350,
+	    height = 350,
+	    data = options.data,
+	    container = options.container,
+	    startColor = options.start_color,
+	    endColor = options.end_color;;
+
+	if(!data){
+		throw new Error('Please pass data');
+	}
+
+	if(!Array.isArray(data) || !data.length || !Array.isArray(data[0])){
+		throw new Error('It should be a 2-D array');
+	}
+
+	var maxValue = 1;//d3.max(data, function(layer) { return d3.max(layer, function(d) { return d; }); });
+    var minValue = 0;//d3.min(data, function(layer) { return d3.min(layer, function(d) { return d; }); });
+
+	var numrows = data.length;
+	var numcols = data[0].length;
+
+	var svg = d3.select(container).select("#corrcontainer");
+
+	var x = d3.scaleBand()
+	    .domain(d3.range(numcols))
+	    .range([0, width]);
+
+	var y = d3.scaleBand()
+	    .domain(d3.range(numrows))
+	    .range([0, height]);
+
+	var colorMap = d3.scaleLinear()
+	    .domain([minValue,maxValue])
+	    .range([startColor, endColor]);
+
+	var row = svg.selectAll(".row")
+	    .data(data);
+
+	var cell = row.selectAll(".cell")
+	    .data(function(d) { return d; });
+
+    cell.select("text")
+	    .style("fill", function(d, i) { return d >= maxValue/2 ? 'white' : 'black'; })
+	    .text(function(d, i) { return d; });
+
+	row.selectAll(".cell")
+	    .data(function(d, i) { return data[i]; })
+	    .style("fill", colorMap);
+}
+}
+</script>
