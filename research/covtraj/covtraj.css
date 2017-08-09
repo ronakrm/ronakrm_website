@@ -76,16 +76,19 @@
 	width : 610px;
 	margin: auto;
 	text-align: center;
+  font-size: 24px;
 }
 
 #corrMats {
 	width : 1000px;
 	margin: auto;
+  padding-left: 200px;
 }
 
 #Genders {
   width : 610px;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .gendertitle {
@@ -94,6 +97,7 @@
   float:left;
 	text-align: center;
   margin: auto;
+  font-size: 24px;
 }
 
 .babynamesonmap {

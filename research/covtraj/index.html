@@ -23,31 +23,32 @@
 	<div class="content">
 		<div class="container">
 			<h1>Finding Differentially Covarying Needles in a Temporally Evolving Haystack: A Scan Statistics Perspective</h1>
+			<div style="display:block;width:50%;float:left;">
 			<h2>Abstract</h2>
-			<p>Recent results in coupled or temporal graphical models offer schemes for estimating the relationship structure 
-between features when the data come from
-related (but distinct) longitudinal sources. A novel application of these ideas is for analyzing group-level differences, i.e., in identifying if the <em>trends</em> of the estimated objects (e.g., 
-covariance or precision matrices) are different across disparate conditions (e.g., gender or disease). Often, poor effect sizes make detecting the <em>differential</em> signal 
-over the <em>full</em> set of features difficult: for example, 
-dependencies between only a <em>subset of features</em> may manifest differently across groups, as we will find in 
-data from a unique longitudinally followed (since 2001) cohort of <em>healthy</em> individuals at risk for Alzheimer's disease (AD). 
-In this work, we first give a parametric model 
-for estimating trends in the space of SPD matrices as a function of one or more covariates. We then generalize scan statistics to graph structures, 
-to search over distinct subsets of features (graph partitions) whose temporal dependency structure may show statistically 
-significant group-wise differences.
-We theoretically analyze the Family Wise Error Rate (FWER) and bounds on Type 1 and Type 2 error. 
-On a cohort of "young elderly" individuals with risk factors for Alzheimer's disease (but otherwise cognitively healthy), 
-we find scientifically interesting 
-group differences where the default analysis, i.e., models estimated on the <em>full graph</em>, do not survive reasonable 
-significance thresholds.
-			</p>
-			<h2>Paper Link</h2>
-			<p>TBD</p>
-			<div class="video" style="">
+				<p>Recent results in coupled or temporal graphical models offer schemes for estimating the relationship structure 
+	between features when the data come from
+	related (but distinct) longitudinal sources. A novel application of these ideas is for analyzing group-level differences, i.e., in identifying if the <em>trends</em> of the estimated objects (e.g., 
+	covariance or precision matrices) are different across disparate conditions (e.g., gender or disease). Often, poor effect sizes make detecting the <em>differential</em> signal 
+	over the <em>full</em> set of features difficult: for example, 
+	dependencies between only a <em>subset of features</em> may manifest differently across groups, as we will find in 
+	data from a unique longitudinally followed (since 2001) cohort of <em>healthy</em> individuals at risk for Alzheimer's disease (AD). 
+	In this work, we first give a parametric model 
+	for estimating trends in the space of SPD matrices as a function of one or more covariates. We then generalize scan statistics to graph structures, 
+	to search over distinct subsets of features (graph partitions) whose temporal dependency structure may show statistically 
+	significant group-wise differences.
+	We theoretically analyze the Family Wise Error Rate (FWER) and bounds on Type 1 and Type 2 error. 
+	On a cohort of "young elderly" individuals with risk factors for Alzheimer's disease (but otherwise cognitively healthy), 
+	we find scientifically interesting 
+	group differences where the default analysis, i.e., models estimated on the <em>full graph</em>, do not survive reasonable 
+	significance thresholds.
+				</p>
+				<h4>Paper Link: TBD</h4>
+			</div>
+			<div class="video" style="display:block;width:50%;float:left">
 				<iframe style="margin:auto; display:block" src="https://player.vimeo.com/video/205606140?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
-			<h2>Babynames Trajectory Results</h2>
-			<div >
+			<div style="display:block">
+				<h2 style="clear:both; text-align: center">Babynames Trajectory Results</h2>
 				<div id = "sliderDiv">
 					<svg id="slider" height="100" width="610"></svg>
 				</div>
@@ -63,18 +64,23 @@ significance thresholds.
 					<svg id="map1" height="300" width="300"></svg>
 					<svg id="map2" height="300" width="300"></svg>
 				</div>
+				<div id="Genders">
+					<span class="gendertitle">Girls</span>
+					<span class="gendertitle">Boys</span>
+				</div>
 				<div id ="corrMats">
-					<div style="display:block; float: right" id="legend"></div>
 			    	<div style="display:block; float:left" id="container1">
 			    		<svg id="corrcontainer" ></svg>
 			    	</div>
 			    	<div style="display:block; float:left" id="container2">
 				    	<svg id="corrcontainer" ></svg>
 			    	</div>
+			    	<div style="display:block; float: left" id="legend"></div>
 			    </div>
 		    </div>
+			
 
-			<h2>Acknowledgements</h2>
+			<h2 style="clear:both">Acknowledgements</h2>
 			<p> This research was supported in part by NIH grants R01 AG040396, AG021155, EB022883 
 and NSF grants DMS 1265202 and CAREER award 1252725. The authors were also supported by 
 the <a href = "http://cpcp.wisc.edu/">UW Center for Predictive Computational Phenotyping</a> (via BD2K award AI117924) and the 
