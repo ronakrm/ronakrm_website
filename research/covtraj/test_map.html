@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="covtraj.css">
+<script src=d3.v4.min.js></script>
+<script src="topojson.v2.min.js" charset="utf-8"></script>
+<script src="main.js"></script>
+
+<body>
+	<div >
+		<div id = "sliderDiv">
+			<svg id="slider" height="100" width="610"></svg>
+		</div>
+		<div id="sliderVal">
+			<text id="slider3text">0</text>
+		</div>
+		
+		<div id="Genders">
+			<span class="gendertitle">Girls</span>
+			<span class="gendertitle">Boys</span>
+		</div>
+		<div id="maps">
+			<svg id="map1" height="300" width="300"></svg>
+			<svg id="map2" height="300" width="300"></svg>
+		</div>
+		<div id ="corrMats">
+			<div style="display:block; float: right" id="legend"></div>
+	    	<div style="display:block; float:left" id="container1">
+	    		<svg id="corrcontainer" ></svg>
+	    	</div>
+	    	<div style="display:block; float:left" id="container2">
+		    	<svg id="corrcontainer" ></svg>
+	    	</div>
+	    </div>
+    </div>
+</body>

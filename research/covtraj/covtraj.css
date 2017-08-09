@@ -1,0 +1,101 @@
+/* CSS goes here. */
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+
+
+
+.subunit.Florida { fill: #ddc; }
+.subunit.Georgia { fill: #cdd; }
+.subunit.Alabama { fill: #cdc; }
+.subunit-boundary {
+  fill: none;
+  stroke: #666;
+}
+.subunit-label {
+  fill: #000;
+  fill-opacity: .5;
+  font-size: 20px;
+  font-weight: 300;
+  text-anchor: middle;
+}
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: col-resize;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+#maps {
+	width : 610px;
+	margin: auto;
+}
+
+#sliderDiv {
+	width : 610px;
+	margin: auto;
+}
+
+#sliderVal {
+	width : 610px;
+	margin: auto;
+	text-align: center;
+}
+
+#corrMats {
+	width : 1000px;
+	margin: auto;
+}
+
+#Genders {
+  width : 610px;
+  margin: auto;
+}
+
+.gendertitle {
+  width : 305px;
+  display:block;
+  float:left;
+	text-align: center;
+  margin: auto;
+}
+
+.babynamesonmap {
+  font-size: small;
+}
