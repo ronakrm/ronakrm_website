@@ -6,17 +6,18 @@ d3.queue()
 function startInit(error, girls, boys) {
 	mapInit("map1");
 	mapInit("map2");
-	corrInit("#container1", girls[0].mat);
-	corrInit("#container2", boys[0].mat);
+	corrInit("#girls", girls[0].mat);
+	corrInit("#boys", boys[0].mat);
 	Legend({
-		widthLegend : 	100,
-    	start_color : 'yellow',
-    	end_color : '#3498db'
+		widthLegend : 	500,
+		heightLegend:   100,
+    	start_color : '#3498db',
+    	end_color : 'yellow'
 	});
 
 
 
-	var slidersvg = d3.select("#slider"),
+	var slidersvg = d3.select("#sliderSVG"),
     margin = {right: 50, left: 50},
     width = +slidersvg.attr("width") - margin.left - margin.right,
     height = +slidersvg.attr("height");
@@ -78,15 +79,9 @@ function startInit(error, girls, boys) {
       		};
 	    });
 
-//	function hue(h) {
-//	  handle.attr("cx", x(h));
-//	  slidersvg.style("background-color", d3.hsl(h, 0.8, 0.8));
-//	}
-
 	function slider_event(val, girls, boys) {
-		//hue(val);
 		handle.attr("cx", x(val));
-		d3.select('#slider3text').text(Math.round(val));
+		d3.select('#Year').text(Math.round(val));
 		updateCorrs(girls.mat, boys.mat);
 		updateMaps(girls.topnames, boys.topnames);
 	}
@@ -94,10 +89,9 @@ function startInit(error, girls, boys) {
 }
 
 function Legend(options) {
-	var margin = {top: 50, right: 50, bottom: 100, left: 100},
-	    width = 250,
-	    height = 250,
+	var sides = 30,
 	    widthLegend = options.widthLegend,
+	    heightLegend = options.heightLegend,
 		startColor = options.start_color,
 		endColor = options.end_color;
 
@@ -106,15 +100,15 @@ function Legend(options) {
 
    var key = d3.select("#legend")
     .append("svg")
-    .attr("width", widthLegend)
-    .attr("height", height + margin.top + margin.bottom);
+    .attr("width", widthLegend + 2*sides)
+    .attr("height", heightLegend);
 
     var legend = key
     .append("defs")
     .append("svg:linearGradient")
     .attr("id", "gradient")
-    .attr("x1", "100%")
-    .attr("y1", "0%")
+    .attr("x1", "0%")
+    .attr("y1", "100%")
     .attr("x2", "100%")
     .attr("y2", "100%")
     .attr("spreadMethod", "pad");
@@ -122,29 +116,29 @@ function Legend(options) {
     legend
     .append("stop")
     .attr("offset", "0%")
-    .attr("stop-color", endColor)
+    .attr("stop-color", startColor)
     .attr("stop-opacity", 1);
 
     legend
     .append("stop")
     .attr("offset", "100%")
-    .attr("stop-color", startColor)
+    .attr("stop-color", endColor)
     .attr("stop-opacity", 1);
 
     key.append("rect")
-    .attr("width", widthLegend/2-10)
-    .attr("height", height)
+    .attr("width", widthLegend)
+    .attr("height", heightLegend/2 - 10)
     .style("fill", "url(#gradient)")
-    .attr("transform", "translate(0," + margin.top + ")");
+    .attr("transform", "translate(" + sides + ",0)");
 
-    var y = d3.scaleLinear()
-    .range([height, 0])
+    var x = d3.scaleLinear()
+    .range([widthLegend, 0])
     .domain([minValue, maxValue]);
 
     key.append("g")
-    .attr("class", "y axis")
-    .attr("transform", "translate(41," + margin.top + ")")
-    .call(d3.axisRight(y));
+    .attr("class", "x axis")
+    .attr("transform", "translate(" + sides + ",41)")
+    .call(d3.axisBottom(x));
 }
 
 function Matrix(options) {
@@ -295,10 +289,23 @@ function mapInit(mapvsvg_id) {
 
 	var subunits = topojson.feature(uk, uk.objects.subunits);
 	var projection = d3.geoAlbers()
-	    .scale(1500)
-	    .translate([-100, -75]);
+						.scale(1)
+						.translate([0, 0]);
 	var path = d3.geoPath()
 	    .projection(projection);
+
+    var b = path.bounds(subunits),
+    s = .95 / Math.max((b[1][0] - b[0][0]) / mapwidth, (b[1][1] - b[0][1]) / mapheight),
+    t = [(mapwidth - s * (b[1][0] + b[0][0])) / 2, (mapheight - s * (b[1][1] + b[0][1])) / 2];
+
+    projection.scale(s).translate(t);
+
+	//var centerX = (path.centroid(0)[0] + path.centroid(1)[0] + path.centroid(2)[0])/3;
+	//var centerY = (path.centroid(0)[1] + path.centroid(1)[1] + path.centroid(2)[1])/3;
+	//console.log(centerX);
+	//console.log(centerY);
+
+
 	mapsvg.append("path")
 	    .datum(subunits)
 	    .attr("d", path);
@@ -314,14 +321,13 @@ function mapInit(mapvsvg_id) {
 	    .attr("d", path)
 	    .attr("class", "subunit-boundary");    
 
-	offsets = [ [25,60], //ALnameOffset
-				[90,25], //FLnameOffset
-				[25,50] ]; //GAnameOffset
+	offsets = [ [50,15], //ALnameOffset
+				[75,5], //FLnameOffset
+				[50,15] ]; //GAnameOffset
 
 	mapsvg.selectAll(".subunit-label")
 	    .data(topojson.feature(uk, uk.objects.subunits).features)
 	  	.enter()
-	  	//.append("text")
 	  	.append("foreignObject")
 	  	.attr("width", 100)
     	.attr("height", 500)
@@ -332,12 +338,8 @@ function mapInit(mapvsvg_id) {
 	      })
 	  	.append("xhtml:div")
 	  	.attr("class", function(d) { return "xhtmldiv " + d.id; })
-	  	.attr("font-size", "small")
 	  	.append('p')
 	  	.attr("class", "babynamesonmap");
-	  	//.attr("font-size", "14px!");
-	    //.attr("dy", ".35em");
-	    //.text(function(d) { return d.id; });
 	});
 }
 
@@ -396,7 +398,7 @@ function updateCorrs(girls, boys) {
 
 	updateCorrelation(
 		{
-	        container : '#container1',
+	        container : '#girls',
 	        data      : girls,
 	        start_color : 'yellow',
 	        end_color : '#3498db'
@@ -404,7 +406,7 @@ function updateCorrs(girls, boys) {
 	);
 	updateCorrelation(
 		{
-	        container : '#container2',
+	        container : '#boys',
 	        data      : boys,
 	        start_color : 'yellow',
 	        end_color : '#3498db'

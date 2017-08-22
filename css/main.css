@@ -2,6 +2,12 @@
 	font-family:		"Roboto", sans-serif;
 	cursor:				auto;
 }
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
 /*	width:				1250px;*/
@@ -26,10 +32,6 @@ a {
 	padding:			0px;
 }
 
-.content * {
-	font-weight:		100;
-}
-
 .selected {
 	color:				#EC4C17;
 }
@@ -43,4 +45,13 @@ html, body {
 	cursor: 			pointer;
 	text-decoration:	none;
 	color:				#EC4C17;
+}
+
+#header,
+.content {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 }
