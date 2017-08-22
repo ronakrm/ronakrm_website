@@ -142,7 +142,7 @@ function Legend(options) {
 }
 
 function Matrix(options) {
-	var margin = {top: 50, right: 50, bottom: 100, left: 100},
+	var margin = {top: 25, right: 25, bottom: 100, left: 100},
 	    width = 250,
 	    height = 250,
 	    data = options.data,
@@ -321,9 +321,9 @@ function mapInit(mapvsvg_id) {
 	    .attr("d", path)
 	    .attr("class", "subunit-boundary");    
 
-	offsets = [ [50,15], //ALnameOffset
-				[75,5], //FLnameOffset
-				[50,15] ]; //GAnameOffset
+	offsets = [ [50,45], //ALnameOffset
+				[90,15], //FLnameOffset
+				[50,40] ]; //GAnameOffset
 
 	mapsvg.selectAll(".subunit-label")
 	    .data(topojson.feature(uk, uk.objects.subunits).features)

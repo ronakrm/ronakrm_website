@@ -128,11 +128,11 @@
 .gendertitle {
   display:block;
 	text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .babynamesonmap {
-  font-size: 0.25em;
+  font-size: 0.75em;
   text-align: center;
 }
 
