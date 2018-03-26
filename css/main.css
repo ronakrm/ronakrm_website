@@ -24,7 +24,7 @@ a {
 } 
 
 .wisc-red {
-	background-color:	#b70101;
+	background-color:	#c5050c;
 }
 
 .content>.container {
@@ -34,6 +34,7 @@ a {
 
 .selected {
 	color:				#EC4C17;
+/*	color:				#c5050c;*/
 }
 
 html, body {
@@ -45,6 +46,7 @@ html, body {
 	cursor: 			pointer;
 	text-decoration:	none;
 	color:				#EC4C17;
+/*	color:				#c5050c;*/
 }
 
 #header,
@@ -55,3 +57,22 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
+
+/*
+h3, h4 {
+	margin:0;
+}
+*/
+
+#research:before{
+padding-top:10px;display:block;content:"";
+}
+
+#coursework:before{
+padding-top:10px;display:block;content:"";
+}
+
+#contact:before{
+padding-top:10px;display:block;content:"";
+}
+

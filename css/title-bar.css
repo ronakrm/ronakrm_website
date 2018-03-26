@@ -38,6 +38,7 @@
 	cursor:				pointer;
 	text-decoration:	none;
 	color: 				#EC4C17;
+/*	color:				#b70101;*/
 }
 
 /* nav styling */
@@ -66,22 +67,13 @@
 }
 #title-bar #nav a:hover {
 	color:				#EC4C17;
-}
-
-
-
-/* wip hover style */
-#title-bar #nav li#wip a {
-	color:				#F3F3F3;
-}
-
-#title-bar #nav li#wip a:hover {
-	color:				#5a5a5a;
+/*	color:				#c5050c;*/
 }
 
 /* title box styling */
 #title-bar #title-box {
 	background-color:	#EC4C17;
+/*	background-color:	#c5050c;*/
 	width: 				auto;
 	height: 			30px;
 }
