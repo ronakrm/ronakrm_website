@@ -7,17 +7,42 @@
 	<link rel="stylesheet" href="./css/title-bar.css">
 	<link rel="stylesheet" href="./css/main.css">
 	
-	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-	<script> 
-		$(function(){
-	  		$("#header").load("header.html"); 
-		});
-	</script> 
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
 </head>
 
 <body>
-	<!-- <div id="header"></div> -->
-    <object name="foo" type="text/html" data="header.html"></object>
+	<div class="header">
+        <table id="title-bar">
+            <tr>
+                <td>
+                    <div id="title">
+                        <div class="container">
+                                <h1><a href="/~ronakrm/">ronakrm</a></h1>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="nav">
+                        <div class="container">
+                            <ul>
+                                <li><a href="#research">Research</a></li>
+                                <li><a href="#coursework">Coursework</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="title-box">
+                        <div class="container">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr style="margin:0">
+    </div>
 	<div class="content">
 		<div class="container">
 			<p>I am currently a graduate student at the University of Wisconsin-Madison. I am working with <a href="http://biostat.wisc.edu/~vsingh" class="prettylink">Dr. Vikas Singh</a> on machine learning and computer vision projects, some in collaboration with the <a href="http://adrc.wisc.edu" class="prettylink">Wisconsin Alzheimer's Disease Research Center</a> to develop methods for analyzing preclinical datasets.</p>
@@ -25,10 +50,10 @@
 			<p>For a take away, check out my <a href="/~ronakrm/resume/Ronak_Mehta_CV.pdf" class="prettylink">R&eacute;sum&eacute;/CV</a>.</p>
 			<p>Some recent news and travel:</p>
 				<p style="margin-left:20px">
-                A few of my recent papers were accepted to ICCV and I will be traveling to Seoul at the end of October!
-                <br/> I presented joint work on Sampling-Free Uncertainty Estimation in RNNs at UAI 2019 in Tel-Aviv, Israel.
-                <br/> Our work on Training Deep 3DCNN Models with Dependent Samples in Neuroimaging was accepted and presented at IPMI 2019 in Hong Kong.
-                <br/> I attended the Third AI Safety Camp in Madrid, Spain, and worked on the analysis of adversarial corruptions to mutli-armed bandit problems.
+                - A few of my recent papers were accepted to ICCV and I will be traveling to Seoul at the end of October!
+                <br/>- I presented joint work on Sampling-Free Uncertainty Estimation in RNNs at UAI 2019 in Tel-Aviv, Israel.
+                <br/>- Our work on Training Deep 3DCNN Models with Dependent Samples in Neuroimaging was presented at IPMI 2019 in Hong Kong.
+                <br/>- I attended the Third AI Safety Camp in Madrid, Spain, and worked on the analysis of adversarial corruptions to mutli-armed bandit problems.
                 <!--<br> I presented my work on <a href="/~ronakrm/research/covtraj/" class="prettylink">covariance trajectory localization</a> at the CVPR 2018 Workshop on Differential Geometry in Computer Vision and Machine Learning (Diff-CVML) in Salt Lake City.-->
 				<!--<br>I presented some of my work below at Midwest Macine Learning Symposium (MMLS 2018) in Chicago, IL.-->
 				<!--<br>I presented a poster on Robust Image Deconvolution (see below) at the Midwest Computer Vision Workshop (MCVW 2018) in Ann Arbor, MI.-->
@@ -40,7 +65,8 @@
 		</div>
 	</div>
 
-	<div class="content" id="research">
+    <a class="anchor" id="research"></a>
+	<div class="content">
 		<div class="container">
 			<hr/>
 			<h2>Research Projects and Publications</h2>
@@ -125,8 +151,8 @@
             <h2> 
             </h2>
 	</div>
-
-	<div class="content" id="coursework">
+    <a class="anchor" id="coursework"></a>
+	<div class="content">
 		<div class="container">
 			<hr/>
 			<h2>Coursework</h2>
@@ -135,7 +161,8 @@
 		</div>
 	</div>
 
-	<div class="content" id="contact">
+    <a class="anchor" id="contact"></a>
+	<div class="content">
 		<div class="container">
 			<hr/>
 			<h2> Contact Me</h2>

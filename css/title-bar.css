@@ -1,3 +1,25 @@
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position.
+It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+The sticky value is not supported in IE or Edge 15 and earlier versions.
+However, for these versions the navbar will inherit default position */
+.header {
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #FBFBFB;
+
+}
+
+.header,
+.content {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 /* title bar styling */
 #title-bar td {
 	/* for debugging alignment and stuff */
@@ -12,7 +34,7 @@
 
 #title-bar {
 	margin:				0px 25px;
-	margin-bottom:		-10px;
+	/*margin-bottom:		-10px;*/
 	padding:			0px 0px;
 }
 
