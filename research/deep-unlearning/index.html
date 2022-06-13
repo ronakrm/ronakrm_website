@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<title>CVPR 2022: Deep Unlearning via Randomized Conditionally Independent Hessians</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../css/title-bar.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<link rel="stylesheet" href="covtraj.css">
+	<script src=d3.v4.min.js></script>
+	<script src="topojson.v2.min.js" charset="utf-8"></script>
+	<script src="main.js"></script>
+	<script> 
+		$(function(){
+	  		$(".header").load("../../header.html"); 
+		});
+	</script> 
+</head>
+
+
+<body>
+	<div id="header" class="header"></div>
+	<div class="content">
+		<div class="container">
+			<div id="myheader">
+		    	<h1>Deep Unlearning via Randomized Conditionally Independent Hessians</h1>
+		    	<h5><br/></h5>
+		    	<h2>CVPR 2022</h2>
+		    	<h3>Ronak Mehta, Sourav Pal, Sathya Ravi, Vikas Singh</h3>
+		 	</div>
+			<div class="row clearfix">
+			<hr class="style1" style="margin-top: 25px"/>
+
+		  <div class="row" style="margin-top: 25px">
+		      <div class="column left">
+		        <h2>Abstract</h2>
+		        <p>Recent legislation has led to interest in machine unlearning, i.e., removing specific training samples from a predictive model as if they never existed in the training
+		dataset. Unlearning may also be required due to corrupted/adversarial data or simply a user’s updated privacy requirement. For models which require no training (k-NN), simply deleting the closest original sample can be effective. But this idea is inapplicable to models which learn richer representations. Recent ideas leveraging optimization-based updates scale poorly with the model dimension d, due to inverting the Hessian of the loss function. We use a variant of a new conditional independence coefficient, L-CODEC, to identify a subset of the model parameters with the most semantic overlap on an individual sample level. Our approach completely avoids the need to invert a (possibly) huge matrix. By utilizing a Markov blanket selection common in the literature, we premise that L-CODEC is also suitable for deep unlearning, as well as other applications in vision. Compared to alternatives, L-CODEC makes approximate unlearning possible in settings that would otherwise be infeasible, including vision models used for face recognition, person re-identification and NLP models that may require unlearning data identified for exclusion.</p>
+		        <br/>
+		      </div>
+		    <div class = "column right">
+		      <h2>Approximate Unlearning</h2>
+		      <br/><br/>
+		      <img src="images/unlearning.png" alt="Unlearning Figure" style="width:100%;height=auto;">
+		    </div>
+		  </div>
+
+		  <hr class="style1" style="margin-top: 25px"/>
+		  <div class="row" style="margin-top: 25px">
+		    <div class="column center">
+		      <h2>Video</h2>
+		    </div>
+		  </div>
+
+		  <hr class="style1" style="margin-top: 25px"/>
+		  <div class="row" style="margin-top: 25px">
+		    <div class="column left">
+		        <h2>Reference</h2>
+		        <br/>
+		      </div>
+		    <div class = "column right">
+		      <h2>Code</h2>
+		    </div>
+		  	</div>
+				<h2>Acknowledgements</h2>
+				<p> This research was supported in part by NIH grants R01 AG040396, AG021155, EB022883 
+and NSF grants DMS 1265202 and CAREER award 1252725. The authors were also supported by 
+the <a href = "http://cpcp.wisc.edu/">UW Center for Predictive Computational Phenotyping</a> (via BD2K award AI117924) and the 
+<a href ="http://www.adrc.wisc.edu/">Wisconsin Alzheimer's Disease Research Center</a> (AG033514). 
+Mehta was supported by a fellowship via training grant award T32LM012413. 
+            	</p>
+			</div>
+		</div>
+
+		<footer>
+	    	<hr class="style1"/>
+		    <h3>Deep Unlearning via Randomized Conditionally Independent Hessians</h3>
+    	</footer>
+
+
+</body>
+
+</html>
