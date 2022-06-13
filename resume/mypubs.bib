@@ -1,0 +1,51 @@
+@article{spgru,
+  title={Sampling-free Uncertainty Estimation in Gated Recurrent Units with Applications to Normative Modeling in Neuroimaging},
+  author={Hwang, Seong Jae and Mehta, Ronak R. and Kim, Hyunwoo J. and Johnson, Sterling C. and Singh, Vikas},
+  journal={Uncertainty in Artificial Intelligence},
+  year={2019},
+  abstract={ There has recently been a concerted effort to derive mechanisms in vision and machine learning systems to offer uncertainty estimates of the predictions they make. Clearly, there are enormous benefits to a system that is not only accurate but also has a sense for when it is not. Existing proposals center around Bayesian interpretations of modern deep architectures - these are effective but can often be computationally demanding. We show how classical ideas in the literature on exponential families on probabilistic networks provide an excellent starting point to derive uncertainty estimates in Gated Recurrent Units (GRU). Our proposal directly quantifies uncertainty deterministically, without the need for costly sampling-based estimation. We show that while uncertainty is quite useful by itself in computer vision and machine learning, we also demonstrate that it can play a key role in enabling statistical analysis with deep networks in neuroimaging studies with normative modeling methods. To our knowledge, this is the first result describing sampling-free uncertainty estimation for powerful sequential models such as GRUs.},
+  doi={http://auai.org/uai2019/proceedings/papers/296.pdf},
+  url={http://auai.org/uai2019/proceedings/papers/296.pdf},
+  paper={http://auai.org/uai2019/proceedings/papers/296.pdf},
+  webpage={http://pages.cs.wisc.edu/~sjh/project/spgru/spgru.html}
+  }
+
+@InProceedings{3DCNN,
+author="Xiong, Yunyang
+and Kim, Hyunwoo J.
+and Tangirala, Bhargav
+and Mehta, Ronak
+and Johnson, Sterling C.
+and Singh, Vikas",
+editor="Chung, Albert C. S.
+and Gee, James C.
+and Yushkevich, Paul A.
+and Bao, Siqi",
+title="On Training Deep 3D CNN Models with Dependent Samples in Neuroimaging",
+booktitle="Information Processing in Medical Imaging",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="99--111",
+abstract="There is much interest in developing algorithms based on 3D convolutional neural networks (CNNs) for performing regression and classification with brain imaging data and more generally, with biomedical imaging data. A standard assumption in learning is that the training samples are independently drawn from the underlying distribution. In computer vision, where we have millions of training examples, this assumption is violated but the empirical performance may remain satisfactory. But in many biomedical studies with just a few hundred training examples, one often has multiple samples per participant and/or data may be curated by pooling datasets from a few different institutions. Here, the violation of the independent samples assumption turns out to be more significant, especially in small-to-medium sized datasets. Motivated by this need, we show how 3D CNNs can be modified to deal with dependent samples. We show that even with standard 3D CNNs, there is value in augmenting the network to exploit information regarding dependent samples. We present empirical results for predicting cognitive trajectories (slope and intercept) from morphometric change images derived from multiple time points. With terms which encode dependency between samples in the model, we get consistent improvements over a strong baseline which ignores such knowledge.",
+isbn="978-3-030-20351-1",
+doi={https://doi.org/10.1007/978-3-030-20351-1_8},
+url={https://link.springer.com/chapter/10.1007/978-3-030-20351-1_8},
+paper={https://doi.org/10.1007/978-3-030-20351-1_8}
+}
+
+@article{qam,
+  title={Localizing differentially evolving covariance structures via scan statistics},
+  author={Mehta, Ronak and Kim, Hyunwoo and Wang, Shulei and Johnson, Sterling and Yuan, Ming and Singh, Vikas},
+  journal={Quarterly of Applied Mathematics},
+  volume={77},
+  number={2},
+  pages={357--398},
+  year={2018},
+  abstract={Recent results in coupled or temporal graphical models offer schemes for estimating the relationship structure between features when the data come from related (but distinct) longitudinal sources. A novel application of these ideas is for analyzing group-level differences, i.e., in identifying if trends of estimated objects (e.g., covariance or precision matrices) are different across disparate conditions (e.g., gender or disease). Often, poor effect sizes make detecting the differential signal over the full set of features difficult: for example, dependencies between only a subset of features may manifest differently across groups. In this work, we first give a parametric model for estimating trends in the space of SPD matrices as a function of one or more covariates. We then generalize scan statistics to graph structures, to search over distinct subsets of features (graph partitions) whose temporal dependency structure may show statistically significant groupwise differences. We theoretically analyze the Family Wise Error Rate (FWER) and bounds on Type 1 and Type 2 error. Evaluating on U.S. census data, we identify groups of states with cultural and legal overlap related to baby name trends and drug usage. On a cohort of individuals with risk factors for Alzheimer's disease (but otherwise cognitively healthy), we find scientifically interesting group differences where the default analysis, i.e., models estimated on the full graph, do not survive reasonable significance thresholds.},
+  doi={https://doi.org/10.1090/qam/1522},
+  url={https://www.ams.org/journals/qam/2019-77-02/S0033-569X-2018-01522-9/},
+  paper={https://doi.org/10.1090/qam/1522},
+  video={https://vimeo.com/205606140},
+  webpage={http://pages.cs.wisc.edu/~ronakrm/research/covtraj/}
+}
