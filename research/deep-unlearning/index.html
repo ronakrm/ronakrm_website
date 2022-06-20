@@ -26,53 +26,65 @@
 		<div class="container">
 			<div id="myheader">
 		    	<h1>Deep Unlearning via Randomized Conditionally Independent Hessians</h1>
-		    	<h5><br/></h5>
+		    	<!-- <h3><br/></h3> -->
 		    	<h2>CVPR 2022</h2>
 		    	<h3>Ronak Mehta, Sourav Pal, Sathya Ravi, Vikas Singh</h3>
+		    	<img src="images/lfoci_pipeline.png" alt="Unlearning Figure" style="width:800px;height=auto;">
 		 	</div>
 			<div class="row clearfix">
 			<hr class="style1" style="margin-top: 25px"/>
 
 		  <div class="row" style="margin-top: 25px">
-		      <div class="column left">
+		      <div>
 		        <h2>Abstract</h2>
 		        <p>Recent legislation has led to interest in machine unlearning, i.e., removing specific training samples from a predictive model as if they never existed in the training
 		dataset. Unlearning may also be required due to corrupted/adversarial data or simply a user’s updated privacy requirement. For models which require no training (k-NN), simply deleting the closest original sample can be effective. But this idea is inapplicable to models which learn richer representations. Recent ideas leveraging optimization-based updates scale poorly with the model dimension d, due to inverting the Hessian of the loss function. We use a variant of a new conditional independence coefficient, L-CODEC, to identify a subset of the model parameters with the most semantic overlap on an individual sample level. Our approach completely avoids the need to invert a (possibly) huge matrix. By utilizing a Markov blanket selection common in the literature, we premise that L-CODEC is also suitable for deep unlearning, as well as other applications in vision. Compared to alternatives, L-CODEC makes approximate unlearning possible in settings that would otherwise be infeasible, including vision models used for face recognition, person re-identification and NLP models that may require unlearning data identified for exclusion.</p>
 		        <br/>
 		      </div>
-		    <div class = "column right">
+		    <!-- <div>
 		      <h2>Approximate Unlearning</h2>
 		      <br/><br/>
-		      <img src="images/layercnn.png" alt="Unlearning Figure" style="width:95%;height=auto;">
-		      <img src="images/lfoci_pipeline.png" alt="Unlearning Figure" style="width:95%;height=auto;">
+		      <img src="images/layercnn.png" alt="Unlearning Figure" style="max-width:500px;height=auto;">
+		      <img src="images/lfoci_pipeline.png" alt="Unlearning Figure" style="width:500px;height=auto;">
 		      <p> Specific subnetworks (layers, kernels or filters, slices, etc.) are associated with particular samples or sample space regions. Using L-FOCI, we can identify these subnetworks and restrict updates to them, enabling efficient unlearning.</p>
 		    </div>
-		  </div>
+		  </div> -->
 
-		  <hr class="style1" style="margin-top: 25px"/>
-		  <div class="row" style="margin-top: 25px">
+		  <!-- <hr class="style1" style="margin-top: 25px"/> -->
+		  <!-- <div class="row" style="margin-top: 25px">
 		    <div class="column center">
 		      <h2>Video</h2>
 		    </div>
-		  </div>
+		  </div> -->
 
 		  <hr class="style1" style="margin-top: 25px"/>
 		  <div class="row" style="margin-top: 25px">
-		    <div class="column left">
-		        <h2>Reference</h2>
-		        <br/>
-		      </div>
-		    <div class = "column right">
-		      <h2>Code</h2>
+		    <div>
+		    <h2>Code</h2>
 		    </div>
+		    <p><a href="https://github.com/vsingh-group/LCODEC-deep-unlearning" class="prettylink">Code Available on GitHub!</a></p>
 		    <hr class="style1" style="margin-top: 25px"/>
 		  	</div>
 				<h2>Acknowledgements</h2>
 				<p> This work was supported by NIH grants RF1AG059312, RF1AG062336 and RF1AG059869, NSF award CCF 1918211 and funds from the American Family Insurance Data Science Institute at UW-Madison. Sathya Ravi was supported by UIC-ICR start-up funds.
             	</p>
 			</div>
+			<hr class="style1" style="margin-top: 25px"/>
+			<div>
+		        <h2>Reference</h2>
+		        <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Mehta_Deep_Unlearning_via_Randomized_Conditionally_Independent_Hessians_CVPR_2022_paper.html" class="prettylink">CVF Proceedings Landing Page</a>
+<pre>
+@InProceedings{Mehta_2022_CVPR,
+    author    = {Mehta, Ronak and Pal, Sourav and Singh, Vikas and Ravi, Sathya N.},
+    title     = {Deep Unlearning via Randomized Conditionally Independent Hessians},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {10422-10431}
+}
+</pre>
+		      </div>
 		</div>
-
 
 </body>
 
